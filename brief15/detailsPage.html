@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="test.css">
+  <script src="test.js" defer></script>
+  <script src="https://kit.fontawesome.com/0f55910cdd.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css" />
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+    defer></script> 
+</head>
+<style>
+ li img ,.splide__slide
+{
+  border-radius: 5px !important;
+}
+.slide{
+  margin: 0 auto !important;
+}
+.slide i
+ {
+  background-color: rgb(242, 242, 242);
+  padding: 30%;
+  text-align: center;
+  border-radius: 50%;
+ }
+ .splide__arrow--prev
+ {
+  position: absolute !important;
+  left: -20px !important;
+ }
+ .splide__arrow--next
+ {
+  position: absolute !important;
+  right: -20px !important;
+ }
+  .thumbnails {
+    display: flex;
+    padding-top: 10px;
+    padding-left: 0;
+  }
+  .thumbnail {
+    width: 200px;
+    height: 110px;
+    overflow: hidden;
+    list-style: none;
+    margin: 0 0.2rem;
+    cursor: pointer;
+    opacity: 0.3;
+  }
+  .thumbnail.is-active {
+    opacity: 1;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100px;
+  }
+  .fa-circle-chevron-right, .fa-circle-chevron-left
+  {
+    padding: 50px;
+  }
+  .contact
+  {
+    background-color: rgb(158, 160, 160);
+    border-radius: 5px;
+  }
+</style>
+<body>
+  <div id="header2">
+    <div>
+<h1 class="title"><a href="homePage.php">lorem</a></h1>
+    </div>
+    <div class="regestration">
+       <div>Sign up</div>
+       <div>Login</div>
+    </div>
+</div>
+
+  <!-- <?php 
+   include("connect.php");
+   $sql= "SELECT announce.code_postal, announce.titre, announce.prix, announce.categorie, announce.Type,announce.Ville,images.image FROM announce JOIN images ON announce.numero_annouce=images.numero_annouce
+   WHERE announce.numero_annouce=5";
+   $query = $con-> prepare( $sql );
+   $query-> execute();
+   $results = $query -> fetch(PDO::FETCH_ASSOC);
+   echo $results["image"];
+  //  print_r($results);
+  //  for($i=0;$i<count($results["image"]);$i++)
+  //  {
+  //   // echo  $results[$i]["titre"];
+  //   // echo  $results[$i]["prix"];
+  //   // echo  $results[$i]["categorie"];
+  //   // echo  $results[$i]["Type"];
+  //   // echo  $results[$i]["Ville"];
+  //   echo  $results[$i]["image"];
+
+  //  }
+  ?> -->
+
+  <div class="container d-flex flex-column gap-4">
+    <div class="container-fluid d-flex justify-content-between">
+      <div class=" d-flex flex-column">
+        <p><?php echo $results["titre"] ?></p>
+        <p>Titre</p>
+        <p>date</p>
+      </div>
+      <div class=" d-flex flex-column">
+        <p>Montant</p>
+        <p>Titre</p>
+      </div>
+    </div>
+    <div class="container slide">
+      <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+        <div style="position:relative;">
+          <div class="splide__arrows">
+            <button class="splide__arrow splide__arrow--prev">
+              <i class="fa-solid fa-angle-left fa-1x"></i>
+            </button>
+            <button class="splide__arrow splide__arrow--next">
+              <i class="fa-solid fa-angle-right fa-1x"></i>
+            </button>
+          </div>
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+              </li>
+              <li class="splide__slide">
+                <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+              </li>
+              <li class="splide__slide">
+                <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+              </li>
+              <li class="splide__slide">
+                <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <ul id="thumbnails" class="thumbnails">
+        <li class="thumbnail">
+          <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+        </li>
+        <li class="thumbnail">
+          <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="d-flex justify-content-between p-5 contact">
+      <p>ikram elghali</p>
+      <button>call now</button>
+    </div>
+    <div class="d-flex  gap-2">
+      <div class="bg-dark text-white ">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          Quibusdam modi amet quas. Quisquam ullam quam,
+          rerum doloribus quibusdam autem culpa. Tempore,
+          nostrum ab adipisci aperiam aliquid fugiat quam soluta expedita.</p>
+      </div>
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55838.59896126053!2d-10.092123286091644!3d28.98996569076936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb5033cfb6695ff%3A0x28b51c9a3fb61aea!2sGuelmim%2081000!5e0!3m2!1sfr!2sma!4v1676587792829!5m2!1sfr!2sma"
+          width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div> -->
+
+  </div>
+<script src="main.js"></script>
+</body>
+
+</html>
