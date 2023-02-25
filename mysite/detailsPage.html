@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="search.css">
+  <link rel="stylesheet" href="details.css">
+  <script src="test.js" defer></script>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+  
+  <script src="https://kit.fontawesome.com/0f55910cdd.js" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/themes/splide-skyblue.min.css" />
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"
+    defer></script> -->
+</head>
+
+<body>
+  <div id="header2">
+    <div>
+<h1 class="title"><a href="homePage.php">lorem</a></h1>
+    </div>
+    <div class="regestration">
+       <div>Sign up</div>
+       <div>Login</div>
+    </div>
+</div>
+
+  <!-- <?php 
+   include("connect.php");
+   $sql= "SELECT announce.code_postal, announce.titre, announce.prix, announce.categorie, announce.Type,announce.Ville,images.image FROM announce JOIN images ON announce.numero_annouce=images.numero_annouce
+   WHERE announce.numero_annouce=5";
+   $query = $con-> prepare( $sql );
+   $query-> execute();
+   $results = $query -> fetch(PDO::FETCH_ASSOC);
+   echo $results["image"];
+  //  print_r($results);
+  //  for($i=0;$i<count($results["image"]);$i++)
+  //  {
+  //   // echo  $results[$i]["titre"];
+  //   // echo  $results[$i]["prix"];
+  //   // echo  $results[$i]["categorie"];
+  //   // echo  $results[$i]["Type"];
+  //   // echo  $results[$i]["Ville"];
+  //   echo  $results[$i]["image"];
+
+  //  }
+  ?> -->
+<!--start annonce header  -->
+    <div id="announce_header_p">
+      <div id="announce_header_c">
+       <div>
+       <p>Sales</p>
+       <p>Villas</p>
+       </div>
+        <h2>Luxury villa for sale</h2>
+        <p><i class="fa-solid fa-location-dot"></i>  this is adress this is adress</p>
+        <p><i class="fa-solid fa-calendar-days"></i> 2023/01/03</p>
+      </div>
+      <div>
+        <p>2000.00 Dh /month</p>
+        <p><i class="fa-sharp fa-solid fa-share-nodes"></i>  Share</p>
+      </div>
+    </div>
+<!--end annonce header  -->
+<!--start gallery  -->
+<div class="slide">
+  <section id="main-slider" class="splide" aria-label="My Awesome Gallery">
+    <div style="position:relative;">
+      <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev">
+          <i class="fa-solid fa-angle-left fa-1x"></i>
+        </button>
+        <button class="splide__arrow splide__arrow--next">
+          <i class="fa-solid fa-angle-right fa-1x"></i>
+        </button>
+      </div>
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+          </li>
+          <li class="splide__slide">
+            <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+          </li>
+          <li class="splide__slide">
+            <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+          </li>
+          <li class="splide__slide">
+            <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" class="rounded"/>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <ul id="thumbnails" class="thumbnails">
+    <li class="thumbnail">
+      <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+    </li>
+    <li class="thumbnail">
+      <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+    </li>
+    <li class="thumbnail">
+      <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+    </li>
+    <li class="thumbnail">
+      <img src="images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="" />
+    </li>
+  </ul>
+</div>
+<!--end gallery  -->
+<!--start annonce description and contact  -->
+<div id="contact">
+ <p>Kaoutar Ettalbi</p>
+ <button type="submit" id="CallNow">Call Now</button>
+</div>
+<!--end annonce description and contact  -->
+<!-- /* start description and map */ -->
+<div id="description">
+<div>
+  <h3>Description:</h3>
+  <p>Appartement meublé à agadir<br>
+    1 salon climatisé<br>
+    2 chambre<br>
+    1 cuisine bien équipée<br>
+    2 salles de bain<br>
+    3 étg avec ascenseurLocation uniquement pour famille</p>
+</div>
+<div>
+  <img src="./images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="">
+</div>
+</div>
+<!-- /* end description and map */ -->
+<!-- start simular product -->
+<h2 style="text-align:center;">Similar Listings</h2>
+<hr class="boldLine">
+<div id="annonces">
+  <?php 
+  foreach($annonces AS $annonce){
+  ?>
+  <div class="annonce">
+      <img src="./images/francesca-tosolini-tHkJAMcO3QE-unsplash (1).jpg" alt="">
+      <div class="inf">
+      <p><?= $annonce['prix']; ?> Dh</p>
+      <h3><?= $annonce['titre']; ?></h3>
+  </div>
+ 
+  <div class="inf2">
+  <div>
+  <p><?= $annonce['Ville']; ?></p>
+</div>
+<div>
+  <p> <?= $annonce['date_publication']; ?></p>
+</div>
+<div>
+  <form action="code.php" method="POST">
+  <button type="submit" class="more"> 
+   More   <!-- <a href="viewannonce.php?id=<?= $annonce['id']?>"> More </a> -->
+  </button>
+</form>
+</div>
+</div>
+<div class="typeAndcateg">
+<p><?= $annonce['categorie']; ?></p>
+<p><?= $annonce['Type']; ?></p>
+</div>
+  </div>
+  <?php } ?>
+</div>
+</section>
+<!-- end simular product -->
+<!-- start footer -->
+<footer class="footer">
+   <div class="containerr">
+    <div class="row">
+      <div class="footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">affiliate program</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>follow us</h4>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+   </div>
+</footer>
+<!-- end footer -->
+<script src="details.js"></script>
+</body>
+</html>
